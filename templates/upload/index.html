@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'upload/upload_index.css' %}">
+{% endblock %}
+
+{% block title %} Upload {% endblock %}
+{% block color %}111{% endblock %}
+
+{% block body %}
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <p style="color: red;">Please ensure that the image has been submited</p>
+        <input type="submit" id="upload" value="Upload">
+    </form>
+
+{% endblock %}
+
+
+{% block scripts %}
+    <script>
+        {#document.getElementById("id_image").change(function () {#}
+        {#    console.log("now can upload");#}
+        {#    document.getElementById("id_image").disabled = false#}
+        {#});#}
+    </script>
+{% endblock %}
+z

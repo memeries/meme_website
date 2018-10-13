@@ -1,0 +1,47 @@
+a {
+    text-decoration: none;
+}
+
+button, input[type=submit], input[type=button] {
+    background-color: rebeccapurple;
+    color: white;
+    padding: 5px 17px;
+    letter-spacing: 1.2px;
+
+    font-size: 15px;
+
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover, input[type=submit]:hover, input[type=button]:hover {
+    opacity: 0.92;
+}
+button:focus, input[type=submit]:focus, input[type=button]:focus {
+    outline: none;
+}
+button:active, input[type=submit]:active, input[type=button]:active {
+    opacity: 0.84;
+}
+
+.green {background-color: lightgreen}
+.blue {background-color: lightblue}
+
+
+input[type=text], input[type=password], textarea {
+    width: 100%;
+    resize: vertical;
+
+    font-size: 15px;
+    padding: 5px;
+
+    background-color: #1e1e1e;
+    color: white;
+
+    border: 1px solid white;
+    border-radius: 5px;
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+    border: 1px solid blue;
+    outline: none;
+}

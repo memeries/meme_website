@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --navbar-height: 50px;
+    --sidebar-width: 200px;
+}
+
+nav {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: var(--navbar-height);
+    position: sticky;
+    top: 0;
+    padding: 10px;
+
+    align-items: center;
+    box-sizing: border-box;
+}
+    nav .logo {
+        font-size: 30px;
+    }
+    nav .buttons {
+        justify-self: end;
+    }
+
+img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+aside {
+    padding: 10px;
+    background-color: #1e1e1e;
+    border-bottom-right-radius: 15px;
+}
+h1 {
+    margin-bottom: 10px;
+}
+
+main {
+    padding: 5px;
+}
+.meme {
+    margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 500px) {
+    aside {
+        width: var(--sidebar-width);
+        position: fixed;
+        top: var(--navbar-height);
+        bottom: 0;
+    }
+
+    main {
+        margin-left: calc(var(--sidebar-width) + 20px);
+        padding: 5px 10px;
+    }
+}
+@media only screen and (min-width: 800px) {
+    main {
+        padding: 5px 80px;
+    }
+}
+@media only screen and (min-width: 900px) {
+    main {
+        padding: 5px 140px;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    main {
+        padding: 5px 180px;
+    }
+}
+@media only screen and (min-width: 1100px) {
+    main {
+        padding: 5px 220px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    main {
+        padding: 5px 250px;
+    }
+}

@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'registration/registration.css' %}">
+{% endblock %}
+
+{% block title %} Register {% endblock %}
+
+
+{% block body %}
+    <h1>Register</h1>
+
+    <h3 style="color: red; margin-top: 10px;">Warning: if you leave this page, you will lose your secret tokn!</h3>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+
+        <input type="submit" class="blue" value="Register">
+        <a href="{% url 'login' %}">Login instead</a>
+
+        <p>If nothing</p>
+    </form>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+{% endblock %}
